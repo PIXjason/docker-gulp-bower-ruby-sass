@@ -7,14 +7,14 @@ RUN apt-get install -y curl
 # SEE installing node:
 # https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
 
-RUN apt-get install -y nodejs nodejs-dbg
+RUN apt-get install -y nodejs
 RUN apt-get install -y npm
 RUN cd usr/bin; ln -s nodejs node; cd ../..
 
 #
 # Install git client
 #
-RUN apt-get install -y git-all
+RUN apt-get install -y git
 
 #
 # Installing SASS/Compass
@@ -22,7 +22,7 @@ RUN apt-get install -y git-all
 #
 # ruby-sass
 RUN apt-get install -y ruby-full rubygems-integration
-RUN gem install sass
+RUN gem install sass -v 3.2.19
 RUN gem install compass
 
 #
