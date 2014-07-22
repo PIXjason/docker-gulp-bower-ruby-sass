@@ -3,6 +3,11 @@ FROM ubuntu
 RUN apt-get update
 RUN apt-get install -y curl
 
+#
+# http://linuxg.net/how-to-fix-error-sudo-add-apt-repository-command-not-found/
+#
+RUN apt-get install -y software-properties-common
+
 
 # SEE installing node:
 # https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
@@ -30,3 +35,13 @@ RUN gem install compass
 #
 RUN npm install -g gulp
 RUN npm install -g bower
+
+#
+# Install pip
+#
+RUN apt-get install -y python-pip
+
+#
+# Install aws command line interface
+#
+RUN pip install awscli
