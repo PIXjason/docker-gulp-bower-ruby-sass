@@ -31,10 +31,11 @@ RUN gem install sass -v 3.2.19
 RUN gem install compass
 
 #
-# Install gulp
+# Install gulp, bower, protractor
 #
 RUN npm install -g gulp
 RUN npm install -g bower
+RUN npm install -g protractor
 
 #
 # Install pip

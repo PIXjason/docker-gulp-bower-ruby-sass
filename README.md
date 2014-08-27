@@ -1,0 +1,1 @@
+A basic setup for a WebUI Continuous Integration server.
