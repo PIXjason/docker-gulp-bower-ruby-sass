@@ -17,9 +17,10 @@ RUN apt-get install -y npm
 RUN cd usr/bin; ln -s nodejs node; cd ../..
 
 #
-# Install git client
+# Install git client, jdk
 #
 RUN apt-get install -y git
+RUN apt-get install -y openjdk-6-jdk
 
 #
 # Installing SASS/Compass
@@ -36,6 +37,11 @@ RUN gem install compass
 RUN npm install -g gulp
 RUN npm install -g bower
 RUN npm install -g protractor
+
+#
+# Update protracter
+#
+RUN webdriver-manager update
 
 #
 # Install pip
