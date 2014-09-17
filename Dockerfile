@@ -106,7 +106,7 @@ RUN npm install --production selenium-standalone@$SELENIUM_NPM_VERSION -g
 RUN npm install -g chromedriver
 
 #
-# Do a set of protractor tests (Don't keep in final dockerfile.)
+# Setup WORKINGDIR so that docker image can be easily tested.
 #
 RUN mkdir -p /srcTest
 ADD . srcTest
